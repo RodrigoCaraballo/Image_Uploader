@@ -1,0 +1,64 @@
+.loading-container {
+    height: 100%;
+    width: 30vw;
+    margin: auto;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 0.75rem;
+    background-color: white;
+    padding: 1rem;
+}
+
+.loading-container h2 {
+    display: block;
+    text-align: start;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.loading {
+    background: var(--white);
+    border-radius: 0.75rem;
+}
+
+.loading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #2F80ED;
+    border-radius: 0.75rem;
+    z-index: 2;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: animate 1500ms infinite alternate;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(0) scaleX(0);
+        transform-origin: left;
+        left: 33.3%;
+        right: auto;
+    }
+
+    45% {
+        transform: translateX(0) scaleX(1);
+        transform-origin: left;
+        left: 33.3%;
+        right: auto;
+    }
+
+    50% {
+        transform: translateX(0) scaleX(1);
+        transform-origin: right;
+        left: auto;
+        right: 33.3%;
+    }
+
+    100% {
+        transform: translateX(0) scaleX(0);
+        transform-origin: right;
+        left: auto;
+        right: 33.3%;
+    }
+}

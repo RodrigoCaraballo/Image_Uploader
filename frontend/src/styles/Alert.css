@@ -1,0 +1,11 @@
+.alert {
+    max-width: 90%;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    background-color: red;
+}
